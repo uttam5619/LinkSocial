@@ -1,0 +1,1 @@
+export const LoginBackgroundImage = `https://ewm.swiss/application/files/5716/0379/3279/social_media_.jpg`
