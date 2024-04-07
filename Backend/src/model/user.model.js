@@ -50,6 +50,24 @@ const userSchema= new Schema({
             type:String, //cloudinary url.
             required:true
         }
+    },
+    profileUrl:{
+        type: String,
+    },
+    friends:[
+        {
+            type:Schema.Types.ObjectId,
+            ref: 'User'
+        }
+    ],
+    views: [
+        {
+            type:String
+        }
+    ],
+    verified:{
+        type:Boolean,
+        default:false
     }
 },{ timestamps:true})
 
