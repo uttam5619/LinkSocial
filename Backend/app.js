@@ -4,6 +4,8 @@ import bodyParser from 'body-parser'
 import cors from 'cors'
 import helmet from 'helmet'
 import morgan from 'morgan'
+import userRoutes from './src/routes/v1/user.route.js'
+import authRouter from './src/routes/v1/auth.route.js'
 
 const app = express()
 
@@ -18,6 +20,10 @@ app.use(express.json({limit: '20mb'}))
 app.use(express.urlencoded({ extended:true}))
 
 app.use(morgan('dev'))
+
+
+app.use('/api/v1/user',userRoutes)
+app.usr('api/v1/auth', authRouter)
 
 
 
